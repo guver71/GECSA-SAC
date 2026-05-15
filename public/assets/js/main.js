@@ -178,3 +178,34 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+/* GECSA — Nav scroll effect */
+(function() {
+  const header = document.querySelector('#header');
+  if (!header) return;
+  function onScroll() {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* Sync carousel dots with Bootstrap carousel events */
+  const obrasCarousel = document.getElementById('obrasCarousel');
+  if (obrasCarousel) {
+    obrasCarousel.addEventListener('slide.bs.carousel', function(e) {
+      document.querySelectorAll('.g-carousel__dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === e.to);
+      });
+    });
+  }
+})();
+
+/* GECSA — Sincroniza dots de la isla hero */
+(function() {
+  const island = document.getElementById('heroIsland');
+  if (!island) return;
+  island.addEventListener('slide.bs.carousel', function(e) {
+    document.querySelectorAll('.g-island__dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === e.to);
+    });
+  });
+})();

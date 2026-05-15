@@ -1,16 +1,20 @@
 {{-- resources/views/layouts/avilon.blade.php --}}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>@yield('tittle', 'Gecsa-Sac')</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>@yield('title', 'GECSA INGENIEROS S.A.C.')</title>
+  <meta name="description" content="GECSA INGENIEROS S.A.C. — Empresa peruana especializada en ejecución, supervisión y consultoría de obras civiles, ambientales y mineras a nivel nacional.">
+  <meta name="keywords" content="construcción, obras civiles, saneamiento, supervisión, consultoría, Perú, GECSA">
+  <meta property="og:title" content="GECSA INGENIEROS S.A.C.">
+  <meta property="og:description" content="Empresa peruana de construcción y consultoría de obras civiles, ambientales y mineras.">
+  <meta property="og:image" content="{{ asset('assets/img/gecsa.png') }}">
+  <meta property="og:type" content="website">
 
   <!-- Favicons -->
-  <link href="{{ asset('assets/img/arquitecto.png') }}" rel="icon">
+  <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
   <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -31,17 +35,6 @@
 
   @stack('styles')
 
-  <!-- Hotjar Tracking Code for Sitio 6416279 (falta el nombre) -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:6416279,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
 
 </head>
 <body
